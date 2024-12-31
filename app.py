@@ -15,7 +15,7 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Max file size: 16 MB
 # Replace the connection string with your MongoDB connection string
 from urllib.parse import quote_plus
 password = quote_plus("MongoDB*666666")
-connection_string = f"mongodb+srv://methunarajan:{password}@cluster0.md27wws.mongodb.net/admin?retryWrites=true&w=majority&ssl=true"
+connection_string = f"mongodb+srv://{username}:{password}@cluster0.md27wws.mongodb.net/admin?retryWrites=true&w=majority&ssl=true"
 client = MongoClient(connection_string, serverSelectionTimeoutMS=5000)
 db = client['turf_01']
 users_collection = db['user_info']
